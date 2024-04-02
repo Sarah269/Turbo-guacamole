@@ -1,5 +1,5 @@
 # Default of Credit Card Clients Web Application
-This is a web applications that predicts the default of credit card clients.
+This is a web application that predicts the default of credit card clients.
 
 ## Project Overview
 - This project uses the Credit Card Machine Learning Classification project to create a web application.
