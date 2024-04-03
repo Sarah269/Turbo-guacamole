@@ -26,6 +26,8 @@ This is a web application that predicts the default of credit card clients.
 
 ## Reference
 - [Dataprofessor: Build 12 Data Science Apps with Python and Streamlit](https://www.youtube.com/watch?v=JwSS70SZdyM)
+- [Dataprofessor Population Dashboard](https://github.com/dataprofessor/population-dashboard/tree/master)
+- [aloofness T: Dump Large Datasets and Machine Learning Models with Joblib and Pickle](https://aloofness54.medium.com/dump-large-datasets-and-machine-learning-models-with-joblib-and-pickle-9fb73970114a)
 
   
   
