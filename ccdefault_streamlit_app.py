@@ -13,7 +13,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 # Write Title for Streamlit App
 st.write("""
-# Simple Prediction App 
+# Credit Card Default Prediction App 
 
 This app predicts the default of credit card clients 
 
