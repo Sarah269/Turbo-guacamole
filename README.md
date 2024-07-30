@@ -12,7 +12,7 @@ This is a web application that predicts the default of credit card clients.
   - Dataset:  [Default of Credit Card Clients](https://archive.ics.uci.edu/datasets?search=Default%20of%20Credit%20Card%20Clients)
  
 ## Tools
-- Ananconda
+- Anaconda
 - Python
   - Pandas
   - RandomForestclassifier
