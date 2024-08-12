@@ -28,8 +28,17 @@ This is a web application that predicts the default of credit card clients.
 As an analyst,  I want to input parameters related to a credit card account into an application,
 so that I can get a prediction on whether the credit card holder is likely to default on their payments.
 
+  Acceptance Criteria:
+  1.  The application allows me to select or input appropriate values for each parameter.
+  2.  Upon submission of the parameters, the application processes the input and generates a prediction.
+  3.  The prediction is displayed on the screen, indicating whether the credit card holder is likely to default.
+
 As an analyst, I want to see the probability of the prediction's accuracy alongside the prediction itself,
 so that I can better understand the confidence level of the model's output and make informed decisions.
+
+  Acceptance Criteria:
+  1.  After submitting the parameters, the application displays a prediction result indicating the likelihood of default.
+  2.  Alongside the prediction, the application provides a probability score representing the accuracy of the prediction.
 
 ## Reference
 - [Dataprofessor: Build 12 Data Science Apps with Python and Streamlit](https://www.youtube.com/watch?v=JwSS70SZdyM)
