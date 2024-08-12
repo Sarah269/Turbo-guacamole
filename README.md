@@ -24,6 +24,13 @@ This is a web application that predicts the default of credit card clients.
 - This dataset has 23 features and 30000 observations.  Based on prior analysis, the features were reduced to 8 with the same accuracy score as the 23 features.
 - This app loads a data model instead of regenerating the model after each parameter change.
 
+## User Story
+As an analyst,  I want to input parameters related to a credit card account into an application,
+so that I can get a prediction on whether the credit card holder is likely to default on their payments.
+
+As an analyst, I want to see the probability of the prediction's accuracy alongside the prediction itself,
+so that I can better understand the confidence level of the model's output and make informed decisions.
+
 ## Reference
 - [Dataprofessor: Build 12 Data Science Apps with Python and Streamlit](https://www.youtube.com/watch?v=JwSS70SZdyM)
 - [Dataprofessor Population Dashboard](https://github.com/dataprofessor/population-dashboard/tree/master)
