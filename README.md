@@ -6,6 +6,7 @@ This is a web application that predicts the default of credit card clients.
 ## Project Overview
 - This project uses the Credit Card Machine Learning Classification project to create a web application.
 - [Credit Card Machine Learning Classification](https://github.com/Sarah269/glowing-dollop/tree/main/Credit%20Card%20Machine%20Learning)
+- Collaborated with Claude to completely redesign the UI/UX for enhanced usability and a seamless user experience.
 
 ## Data Source
 - UCI Machine Learning Repository
