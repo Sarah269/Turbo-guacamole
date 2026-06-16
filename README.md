@@ -20,6 +20,7 @@ This is a web application that predicts the default of credit card clients.
   - Joblib
   - Streamlit
 - Replit
+- Claude
  
 ## Data Preparation
 - This dataset has 23 features and 30000 observations.  Based on prior analysis, the features were reduced to 8 with the same accuracy score as the 23 features.
