@@ -1,0 +1,19 @@
+[theme]
+
+# Navy blue — primary interactive elements (buttons, links, sliders)
+primaryColor = "#2980B9"
+
+# Soft blue-grey page background
+backgroundColor = "#F0F4F8"
+
+# White widget / input backgrounds
+secondaryBackgroundColor = "#FFFFFF"
+
+# Deep navy for all text
+textColor = "#1E3A5F"
+
+# Clean sans-serif
+font = "sans serif"
+
+[server]
+enableStaticServing = true
