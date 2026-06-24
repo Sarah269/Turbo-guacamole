@@ -2,8 +2,9 @@
 # Machine Learning Classification Model
 # Random Forest Classifier
 
-
+# Modifications
 # Modified interface layout and color scheme using Claude - 06/16/26
+# Added "Clear Inputs" button using Claude - 06/24/26
 
 
 import streamlit as st
@@ -236,8 +237,31 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# ── Session State Defaults ────────────────────────────────────────────────────
+DEFAULTS = {
+    "LIMIT_BAL": None,
+    "PAY_0":     -2,
+    "BILL_AMT1": None,
+    "PAY_AMT1":  None,
+    "PAY_AMT2":  None,
+    "PAY_AMT3":  None,
+    "PAY_AMT4":  None,
+}
+
+for key, val in DEFAULTS.items():
+    if key not in st.session_state:
+        st.session_state[key] = val
+
+def reset_inputs():
+    for key, val in DEFAULTS.items():
+        st.session_state[key] = val
+
 # ── Input Section ─────────────────────────────────────────────────────────────
 st.markdown('<div class="section-label">Customer Profile — Input Parameters</div>', unsafe_allow_html=True)
+
+btn_col, _ = st.columns([1, 5])
+with btn_col:
+    st.button("🗑️ Clear Inputs", on_click=reset_inputs, use_container_width=True)
 
 col1, col2 = st.columns(2, gap="medium")
 
@@ -245,11 +269,14 @@ with col1:
     st.markdown('<div class="input-card"><h4>💰 Account Overview</h4>', unsafe_allow_html=True)
     LIMIT_BAL = st.number_input(
         "Credit Card Limit (NT$)",
-        value=None, min_value=0, placeholder="Enter Credit Card Limit", step=500
+        value=st.session_state["LIMIT_BAL"],
+        min_value=0, placeholder="Enter Credit Card Limit", step=500,
+        key="LIMIT_BAL",
     )
     PAY_0 = st.selectbox(
         "Current Repayment Status",
-        (-2,-1,1,2,3,4,5,6,7,8,9), 
+        (-2,-1,1,2,3,4,5,6,7,8,9),
+        index=list((-2,-1,1,2,3,4,5,6,7,8,9)).index(st.session_state["PAY_0"]),
         help=(
             "Repayment Status Codes\n\n"
             "-2 = No credit use\n"
@@ -263,11 +290,14 @@ with col1:
             "7 = Past due 7 months\n"
             "8 = Past due 8 months\n"
             "9 = Past due 9+ months"
-        )
+        ),
+        key="PAY_0",
     )
     BILL_AMT1 = st.number_input(
         "Current Statement Balance (NT$)",
-        value=None, placeholder="Enter Current Statement Balance", step=500
+        value=st.session_state["BILL_AMT1"],
+        placeholder="Enter Current Statement Balance", step=500,
+        key="BILL_AMT1",
     )
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -275,19 +305,27 @@ with col2:
     st.markdown('<div class="input-card"><h4>📅 Payment History</h4>', unsafe_allow_html=True)
     PAY_AMT1 = st.number_input(
         "Previous Month Payment (NT$)",
-        value=None, min_value=0, placeholder="Enter Previous Month Payment", step=50
+        value=st.session_state["PAY_AMT1"],
+        min_value=0, placeholder="Enter Previous Month Payment", step=50,
+        key="PAY_AMT1",
     )
     PAY_AMT2 = st.number_input(
         "Payment — 2 Months Prior (NT$)",
-        value=None, min_value=0, placeholder="Enter 2 Months Prior Payment", step=50
+        value=st.session_state["PAY_AMT2"],
+        min_value=0, placeholder="Enter 2 Months Prior Payment", step=50,
+        key="PAY_AMT2",
     )
     PAY_AMT3 = st.number_input(
         "Payment — 3 Months Prior (NT$)",
-        value=None, min_value=0, placeholder="Enter 3 Months Prior Payment", step=50
+        value=st.session_state["PAY_AMT3"],
+        min_value=0, placeholder="Enter 3 Months Prior Payment", step=50,
+        key="PAY_AMT3",
     )
     PAY_AMT4 = st.number_input(
         "Payment — 4 Months Prior (NT$)",
-        value=None, min_value=0, placeholder="Enter 4 Months Prior Payment", step=50
+        value=st.session_state["PAY_AMT4"],
+        min_value=0, placeholder="Enter 4 Months Prior Payment", step=50,
+        key="PAY_AMT4",
     )
     st.markdown('</div>', unsafe_allow_html=True)
 
